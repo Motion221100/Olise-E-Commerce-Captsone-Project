@@ -22,11 +22,11 @@ DELIMITER $$
 				order_id VARCHAR(100),
                 customer_id VARCHAR(100),
 				order_status VARCHAR(15),
-				order_purch_timestamp DATETIME,
-				order_appr_at DATETIME,
-				del_carrier_date DATETIME,
-				del_customer_date DATETIME,
-				estim_delivery_date DATE
+				order_purchase_timestamp TIMESTAMP,
+				order_appr_at TIMESTAMP,
+				order_delivered_carrier_date TIMESTAMP,
+				order_delivered_customer_date TIMESTAMP,
+				order_estimated_delivery_date TIMESTAMP
 			);
             
 			CREATE TABLE bronze.selr_sellers (
@@ -41,7 +41,7 @@ DELIMITER $$
 				order_item_id INT,
                 product_id VARCHAR(100),
 				seller_id VARCHAR(100),
-				shipping_lim_date DATETIME,
+				shipping_limit_date TIMESTAMP,
 				price DECIMAL(10, 2),
 				freight_value DECIMAL(5, 2)
 			);
@@ -61,25 +61,25 @@ DELIMITER $$
 				review_score INT,
 				review_comment_title TEXT,
 				review_comment_message TEXT,
-                review_creation_date DATETIME,
-                review_answer_timestamp DATETIME
+                review_creation_date TIMESTAMP,
+                review_answer_timestamp TIMESTAMP
 			);
 			
 			CREATE TABLE bronze.prod_products (
 				product_id VARCHAR(100),
-				prod_category_name TEXT, 
-				prod_name_length INT,
-				prod_description_length INT,
-				prod__photos_qty INT,
-				prod_weight_g INT,
-				prod_length_cm INT,
-				prod_height_cm INT, 
-				prod_width_cm INT
+				product_category_name TEXT, 
+				product_name_length INT,
+				product_description_length INT,
+				product_photos_qty INT,
+				product_weight_g INT,
+				product_length_cm INT,
+				product_height_cm INT, 
+				product_width_cm INT
 			);
 			
 			CREATE TABLE bronze.prod_category_name_translation (
-				prod_category_name TEXT,
-				prod_category_name_english TEXT
+				product_category_name TEXT,
+				product_category_name_english TEXT
 			);
 	
         END $$
