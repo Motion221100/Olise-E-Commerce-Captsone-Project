@@ -1,2 +1,2 @@
 # Olise-E-Commerce-Data Warehouse Project
-Capstone project using the Olist Brazilian e-commerce dataset, simulating real-world data analyst tasks. Focuses on cleaning, validating, and transforming data, analyzing orders, payments, and deliveries, and generating actionable business insights.
+End-to-end SQL data warehouse project built in MySQL Workbench, implementing a bronze–silver layered architecture for data ingestion and cleansing. GenAI was used to assist with SQL code cleaning, optimization, and generation
